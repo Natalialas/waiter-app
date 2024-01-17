@@ -16,6 +16,7 @@
     "react-scripts": "5.0.1",
     "redux": "4.1.2",
     "redux-devtools-extension": "2.13.9",
+    "redux-thunk": "2.4.2",
     "sass": "1.65.1",
     "web-vitals": "^2.1.4"
   },
@@ -46,6 +47,6 @@
     ]
   },
   "devDependencies": {
-    "json-server": "0.17.0"
+    "json-server": "0.17.3"
   }
 }
