@@ -21,7 +21,7 @@ const App = () => {
       <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/table/:id" element={<SingleTable />} />
+          <Route path="/table/:tableId" element={<SingleTable />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
