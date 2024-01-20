@@ -17,6 +17,7 @@ const TableForm = ({ action, actionText, ...props}) => {
     const [maxPeopleAmount, setMaxPeopleAmount] = useState(props.maxPeopleAmount || '');
     const [bill, setBill] = useState(props.bill || '');
     const [statusError, setStatusError] = useState(false);
+    
 
     const handleSubmit = () => {
         setStatusError(!status || !tableStatus.includes(status));
@@ -24,7 +25,12 @@ const TableForm = ({ action, actionText, ...props}) => {
           action({ status, peopleAmount, maxPeopleAmount, bill });
         }
     };
+  
+    return (
+        <section>
 
-}
+        </section>
+    );
+};
 
 export default TableForm;
