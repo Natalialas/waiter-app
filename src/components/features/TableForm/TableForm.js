@@ -18,6 +18,7 @@ const TableForm = ({ action, actionText, ...props}) => {
     const [bill, setBill] = useState(props.bill || '');
     const [statusError, setStatusError] = useState(false);
     
+    
     const handleSubmit = () => {
         setStatusError(!status || !tableStatus.includes(status));
         if (status && tableStatus.includes(status)) {
