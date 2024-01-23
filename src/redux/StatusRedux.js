@@ -1,6 +1,7 @@
+import { API_URL } from "../config";
 
 //selectors
-export const getStatus = (state) => state.status;
+export const getStatus = ({ status }) => status;
 
 //actions 
 const createActionName = actionName => `app/status/${actionName}`;
@@ -8,11 +9,11 @@ const TABLE_STATUS = createActionName('TABLE_STATUS');
 
 // action creator
 
-export const tableStatus  = payload => ({type: TABLE_STATUS, payload});
+export const tableStatus  = (payload) => ({ type: TABLE_STATUS, payload });
 
 export const fetchStatus = () => {
     return(dispatch) => {
-        fetch( 'http://localhost:3131/status')
+      fetch(API_URL + "/status")
         .then(res => res.json())
         .then(status => dispatch(tableStatus(status)))
     }
